@@ -1,0 +1,33 @@
+.tit {
+    cursor: pointer;
+    color:blue;
+}
+
+
+
+
+.header {
+    top: 0;
+    height: 74px;
+    border-bottom: solid black 1px;
+    padding: 4px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: black;
+    z-index: 999;
+}
+
+.left {
+    float: left;
+
+}
+
+.right {
+    float: right;
+}
+
+.flv {
+    padding-top: 150px;
+}
