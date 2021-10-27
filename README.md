@@ -11,7 +11,7 @@ Easy to integrate, Responsive.
 HTML CSS  React JS  Redux API
 
 # To get a local copy up and running follow these simple example steps:
-Clone the repo git clone https://github.com/edinhassagic/video-browser 
+Clone the repo git clone https://github.com/edinhassagic/video-stream 
 Install NPM packages npm install
  Start the project npm start, 
  run server with  npm run server in another terminal
