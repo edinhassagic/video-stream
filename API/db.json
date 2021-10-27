@@ -1,0 +1,19 @@
+{
+  "streams": [
+    {
+      "title": "WOT",
+      "description": "game",
+      "id": 6
+    },
+    {
+      "title": "LOL",
+      "description": "gamings",
+      "id": 7
+    },
+    {
+      "title": "Softhouse",
+      "description": "Birthday",
+      "id": 8
+    }
+  ]
+}
