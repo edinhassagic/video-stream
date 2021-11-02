@@ -7,7 +7,6 @@ import { useHistory, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleStream, updateStream } from "./redux/actions";
 
-
 const EditStream = () => {
   const [state, setstate] = useState({
     title: "",
@@ -19,24 +18,19 @@ const EditStream = () => {
   const { title, description } = state;
 
   useEffect(() => {
-      dispatch(getSingleStream(id))
-  },[])
+    dispatch(getSingleStream(id));
+  }, []);
 
-  
-
-
-
-  let {id} = useParams();
+  let { id } = useParams();
   let history = useHistory();
   let dispatch = useDispatch();
-  const {stream} = useSelector((state) => state.data)
+  const { stream } = useSelector((state) => state.data);
 
   useEffect(() => {
-    if(stream) {
-        setstate({...stream})
+    if (stream) {
+      setstate({ ...stream });
     }
-},[stream])
-
+  }, [stream]);
 
   const handleInputChange = (e) => {
     let { name, value } = e.target;
@@ -56,7 +50,6 @@ const EditStream = () => {
 
   return (
     <div>
-    
       <Box
         onSubmit={handleSubmit}
         component="form"
@@ -82,15 +75,15 @@ const EditStream = () => {
           id="standard-basic"
           label="Enter Description"
           variant="standard"
-          value={description || "" }
+          value={description || ""}
           type="text"
           name="description"
           onChange={handleInputChange}
         />
       </Box>
       <Button
-      onChange={handleInputChange}
-      onClick={handleSubmit}
+        onChange={handleInputChange}
+        onClick={handleSubmit}
         type="submit"
         color="primary"
         variant="contained"

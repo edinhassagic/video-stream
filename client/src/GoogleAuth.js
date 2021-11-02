@@ -2,7 +2,8 @@ import {GoogleLogin, GoogleLogout} from 'react-google-login'
 import {useState} from 'react'
 import React from 'react'
 
-const GoogleAuth = () => {
+
+const GoogleAuth = ({setUser}) => {
 
 const [showLoginButton, setShowLoginButton] = useState(true)
   const [showLogoutButton, setShowLogoutButton] = useState(false)
@@ -13,6 +14,7 @@ const [showLoginButton, setShowLoginButton] = useState(true)
     console.log(res.profileObj)
     setShowLoginButton(false)
     setShowLogoutButton(true)
+    setUser(res.googleId)
    
   }
 
@@ -24,6 +26,7 @@ const [showLoginButton, setShowLoginButton] = useState(true)
     alert("You have been signed out successfuly")
     setShowLoginButton(true)
     setShowLogoutButton(false)
+    setUser("")
    
   }
   return ( 
