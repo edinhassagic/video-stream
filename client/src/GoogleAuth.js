@@ -15,6 +15,7 @@ const [showLoginButton, setShowLoginButton] = useState(true)
     setShowLoginButton(false)
     setShowLogoutButton(true)
     setUser(res.googleId)
+    
    
   }
 
@@ -27,6 +28,7 @@ const [showLoginButton, setShowLoginButton] = useState(true)
     setShowLoginButton(true)
     setShowLogoutButton(false)
     setUser("")
+    console.log("Logout Success");
    
   }
   return ( 
@@ -38,6 +40,7 @@ const [showLoginButton, setShowLoginButton] = useState(true)
   onSuccess = {onLoginSuccess}
   onFailure = {onFailureSuccess}
   cookiePolicy = {'single_host_origin'}
+  isSignedIn={true}
   
   /> : null }
 
